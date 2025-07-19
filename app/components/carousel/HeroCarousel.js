@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation, EffectFade } from "swiper/modules";
-import WorkInProgress from "./ui/WorkInProgress";
+import WorkInProgress from "../ui/WorkInProgress";
 
 // Import Swiper styles
 import "swiper/css";

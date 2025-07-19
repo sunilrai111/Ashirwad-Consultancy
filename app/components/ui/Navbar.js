@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -40,8 +41,14 @@ export default function Navbar() {
             className="flex items-center space-x-2"
             onClick={closeMenu}
           >
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-lg flex items-center justify-center shadow-lg">
-              <span className="text-white font-bold text-lg">A</span>
+            <div className="w-10 h-10 rounded-lg flex items-center justify-center">
+              {/* <span className="text-white font-bold text-lg">A</span> */}
+              <Image
+                src="/images/logo.png"
+                alt="Ashirwad"
+                width={40}
+                height={40}
+              />
             </div>
             <div className="hidden sm:block">
               <span className="text-xl font-bold text-gray-900">Ashirwad</span>
