@@ -1,6 +1,8 @@
 "use client";
 
+import { useState } from "react";
 import { useRouter } from "next/navigation";
+import WorkInProgress from "../ui/WorkInProgress";
 
 export default function CTASection({
   title,
@@ -13,16 +15,42 @@ export default function CTASection({
   textColor = "text-white",
 }) {
   const router = useRouter();
+  const [showWorkInProgress, setShowWorkInProgress] = useState(false);
+  const [workInProgressConfig, setWorkInProgressConfig] = useState({});
 
   const handlePrimaryClick = () => {
     router.push("/quick-enquiry");
   };
 
   const handleSecondaryClick = () => {
-    if (secondaryButtonLink && secondaryButtonLink !== "#") {
+    if (secondaryButtonText?.toLowerCase().includes("brochure")) {
+      setWorkInProgressConfig({
+        title: "Brochure Download",
+        message:
+          "Our comprehensive company brochure is being prepared. Contact us for detailed information about our services.",
+      });
+      setShowWorkInProgress(true);
+    } else if (secondaryButtonLink && secondaryButtonLink !== "#") {
       router.push(secondaryButtonLink);
+    } else {
+      setWorkInProgressConfig({
+        title: "Coming Soon!",
+        message:
+          "This feature is currently under development. We'll notify you when it's ready!",
+      });
+      setShowWorkInProgress(true);
     }
   };
+
+  if (showWorkInProgress) {
+    return (
+      <WorkInProgress
+        title={workInProgressConfig.title}
+        message={workInProgressConfig.message}
+        showBackButton={true}
+      />
+    );
+  }
 
   return (
     <section className={`py-16 ${bgColor} ${textColor}`}>
@@ -32,14 +60,14 @@ export default function CTASection({
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <button
             onClick={handlePrimaryClick}
-            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-medium transition-colors duration-200"
+            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-medium transition-colors duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
           >
             {primaryButtonText}
           </button>
           {secondaryButtonText && (
             <button
               onClick={handleSecondaryClick}
-              className="border border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-medium transition-colors duration-200"
+              className="border border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-medium transition-colors duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               {secondaryButtonText}
             </button>

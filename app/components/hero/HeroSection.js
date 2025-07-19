@@ -3,7 +3,7 @@ export default function HeroSection({
   subtitle,
   primaryButtonText = "Quick Enquiry",
   secondaryButtonText = null,
-  phoneNumber = "+91 98765 43210",
+  phoneNumber = "+91 9714631847",
   gradientFrom = "from-blue-600",
   gradientTo = "to-blue-800",
   showPhone = true,

@@ -48,8 +48,8 @@ export default function Contact() {
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Phone</h3>
-              <p className="text-gray-600 mb-2">+91 98765 43210</p>
-              <p className="text-gray-600">+91 98765 43211</p>
+              <p className="text-gray-600 mb-2">+91 9714631847</p>
+              <p className="text-gray-600">+91 9714631847</p>
             </div>
 
             <div className="text-center">
@@ -124,7 +124,7 @@ export default function Contact() {
                 <p>123, Industrial Area</p>
                 <p>Andheri East, Mumbai</p>
                 <p>Maharashtra - 400069</p>
-                <p className="font-semibold mt-3">+91 98765 43210</p>
+                <p className="font-semibold mt-3">+91 9714631847</p>
               </div>
             </div>
 
@@ -136,7 +136,7 @@ export default function Contact() {
                 <p>456, Business Park</p>
                 <p>Connaught Place, Delhi</p>
                 <p>Delhi - 110001</p>
-                <p className="font-semibold mt-3">+91 98765 43211</p>
+                <p className="font-semibold mt-3">+91 9714631847</p>
               </div>
             </div>
 
@@ -148,7 +148,7 @@ export default function Contact() {
                 <p>789, Tech Hub</p>
                 <p>Electronic City, Bangalore</p>
                 <p>Karnataka - 560100</p>
-                <p className="font-semibold mt-3">+91 98765 43212</p>
+                <p className="font-semibold mt-3">+91 9714631847</p>
               </div>
             </div>
 
@@ -160,7 +160,7 @@ export default function Contact() {
                 <p>321, Industrial Estate</p>
                 <p>Guindy, Chennai</p>
                 <p>Tamil Nadu - 600032</p>
-                <p className="font-semibold mt-3">+91 98765 43213</p>
+                <p className="font-semibold mt-3">+91 9714631847</p>
               </div>
             </div>
 
@@ -172,7 +172,7 @@ export default function Contact() {
                 <p>654, Business District</p>
                 <p>Hitech City, Hyderabad</p>
                 <p>Telangana - 500081</p>
-                <p className="font-semibold mt-3">+91 98765 43214</p>
+                <p className="font-semibold mt-3">+91 9714631847</p>
               </div>
             </div>
 
@@ -184,7 +184,7 @@ export default function Contact() {
                 <p>987, Industrial Zone</p>
                 <p>Hinjewadi, Pune</p>
                 <p>Maharashtra - 411057</p>
-                <p className="font-semibold mt-3">+91 98765 43215</p>
+                <p className="font-semibold mt-3">+91 9714631847</p>
               </div>
             </div>
           </div>
@@ -333,7 +333,7 @@ export default function Contact() {
           <div className="mt-8">
             <p className="text-gray-300">
               For urgent queries, you can reach us on our emergency helpline:{" "}
-              <strong>+91 98765 43210</strong>
+              <strong>+91 9714631847</strong>
             </p>
           </div>
         </div>

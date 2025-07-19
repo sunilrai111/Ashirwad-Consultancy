@@ -1,9 +1,10 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation, EffectFade } from "swiper/modules";
+import WorkInProgress from "./ui/WorkInProgress";
 
 // Import Swiper styles
 import "swiper/css";
@@ -13,6 +14,43 @@ import "swiper/css/effect-fade";
 
 export default function HeroCarousel() {
   const router = useRouter();
+  const [showWorkInProgress, setShowWorkInProgress] = useState(false);
+  const [workInProgressConfig, setWorkInProgressConfig] = useState({});
+
+  const handleSecondaryButtonClick = (buttonText) => {
+    let title = "Coming Soon!";
+    let message = "We're working hard to bring you something amazing.";
+
+    switch (buttonText) {
+      case "Explore Solutions":
+        title = "Solutions Explorer";
+        message =
+          "Our comprehensive solutions explorer is under development. You'll soon be able to browse all our services in detail.";
+        break;
+      case "Check Eligibility":
+        title = "Eligibility Checker";
+        message =
+          "Our advanced eligibility checker is being developed. For now, please use our quick enquiry form for eligibility assessment.";
+        break;
+      case "Download Guide":
+        title = "Government Benefits Guide";
+        message =
+          "Our comprehensive guide to government benefits and subsidies is being prepared. Contact us for immediate assistance.";
+        break;
+      case "View Products":
+        title = "Product Catalog";
+        message =
+          "Our detailed product catalog is under development. Contact us to learn about our machinery financing options.";
+        break;
+      default:
+        title = "Feature Coming Soon";
+        message =
+          "This feature is currently under development. We'll notify you when it's ready!";
+    }
+
+    setWorkInProgressConfig({ title, message });
+    setShowWorkInProgress(true);
+  };
 
   const slides = [
     {
@@ -23,7 +61,7 @@ export default function HeroCarousel() {
       secondaryButtonText: "Explore Solutions",
       gradientFrom: "from-blue-600",
       gradientTo: "to-blue-800",
-      phoneNumber: "+91 98765 43210",
+      phoneNumber: "+91 9714631847",
       backgroundImage:
         "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80",
     },
@@ -35,7 +73,7 @@ export default function HeroCarousel() {
       secondaryButtonText: "Check Eligibility",
       gradientFrom: "from-green-600",
       gradientTo: "to-green-800",
-      phoneNumber: "+91 98765 43210",
+      phoneNumber: "+91 9714631847",
       backgroundImage:
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
     },
@@ -47,7 +85,7 @@ export default function HeroCarousel() {
       secondaryButtonText: "Download Guide",
       gradientFrom: "from-purple-600",
       gradientTo: "to-purple-800",
-      phoneNumber: "+91 98765 43210",
+      phoneNumber: "+91 9714631847",
       backgroundImage:
         "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2126&q=80",
     },
@@ -59,11 +97,21 @@ export default function HeroCarousel() {
       secondaryButtonText: "View Products",
       gradientFrom: "from-orange-600",
       gradientTo: "to-orange-800",
-      phoneNumber: "+91 98765 43210",
+      phoneNumber: "+91 9714631847",
       backgroundImage:
         "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
     },
   ];
+
+  if (showWorkInProgress) {
+    return (
+      <WorkInProgress
+        title={workInProgressConfig.title}
+        message={workInProgressConfig.message}
+        showBackButton={true}
+      />
+    );
+  }
 
   return (
     <section className="relative">
@@ -112,15 +160,20 @@ export default function HeroCarousel() {
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-delay-2">
                     <button
-                      className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-medium transition-colors duration-200"
+                      className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-medium transition-colors duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
                       onClick={() => router.push("/quick-enquiry")}
                     >
                       {slide.primaryButtonText}
                     </button>
-                    <button className="border border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-medium transition-colors duration-200">
+                    <button
+                      className="border border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-medium transition-colors duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
+                      onClick={() =>
+                        handleSecondaryButtonClick(slide.secondaryButtonText)
+                      }
+                    >
                       {slide.secondaryButtonText}
                     </button>
-                    <div className="flex items-center justify-center space-x-2 bg-white/10 px-6 py-3 rounded-lg hover:bg-white/20 transition-all duration-300">
+                    <div className="flex items-center justify-center space-x-2 bg-white/10 px-6 py-3 rounded-lg hover:bg-white/20 transition-all duration-300 backdrop-blur-sm">
                       <svg className="w-5 h-5" fill="white" viewBox="0 0 20 20">
                         <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                       </svg>
