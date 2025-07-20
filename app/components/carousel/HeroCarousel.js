@@ -119,7 +119,7 @@ export default function HeroCarousel() {
         modules={[Autoplay, Pagination, Navigation, EffectFade]}
         effect="fade"
         autoplay={{
-          delay: 5000,
+          delay: 50000000,
           disableOnInteraction: false,
         }}
         pagination={{
@@ -150,7 +150,7 @@ export default function HeroCarousel() {
               ></div>
 
               {/* Content */}
-              <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
+              <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full h-[655px] lg:h-auto">
                 <div className="text-center">
                   <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in text-white">
                     {slide.title}
