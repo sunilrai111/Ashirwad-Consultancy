@@ -36,7 +36,7 @@ export default function CTASection({
       setWorkInProgressConfig({
         title: "Coming Soon!",
         message:
-          "This feature is currently under development. We'll notify you when it's ready!",
+          "This feature is currently under development. We&apos;ll notify you when it&apos;s ready!",
       });
       setShowWorkInProgress(true);
     }

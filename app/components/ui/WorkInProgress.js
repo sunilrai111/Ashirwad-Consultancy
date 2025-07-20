@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 
 export default function WorkInProgress({
   title = "Coming Soon!",
-  message = "We're working hard to bring you something amazing. This feature will be available soon.",
+  message = "We&apos;re working hard to bring you something amazing. This feature will be available soon.",
   showBackButton = true,
 }) {
   const router = useRouter();

@@ -112,7 +112,7 @@ export default function QuickEnquiry() {
                       </svg>
                       <span className="text-green-800 font-medium">
                         Thank you! Your enquiry has been submitted successfully.
-                        We'll contact you within 24 hours.
+                        We&apos;ll contact you within 24 hours.
                       </span>
                     </div>
                   </div>

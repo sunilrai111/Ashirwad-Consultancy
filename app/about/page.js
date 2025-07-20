@@ -27,7 +27,7 @@ export default function About() {
               <p className="text-gray-600 mb-4">
                 <strong>Ashirwad Consultancy</strong> is your premier{" "}
                 <strong>industrial financing & government subsidy</strong>{" "}
-                partner, established in <strong>2001</strong>. We've been
+                partner, established in <strong>2001</strong>. We&apos;ve been
                 transforming business dreams into reality for over two decades.
               </p>
               <p className="text-gray-600 mb-4">

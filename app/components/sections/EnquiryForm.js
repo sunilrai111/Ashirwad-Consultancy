@@ -15,7 +15,7 @@ export default function EnquiryForm() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-3xl font-bold mb-4">Any Query or Requirements?</h2>
         <p className="text-gray-300 mb-8">
-          Submit your details below and we'll get back to you
+          Submit your details below and we&apos;ll get back to you
         </p>
 
         <div className="bg-white/10 p-8 rounded-lg">

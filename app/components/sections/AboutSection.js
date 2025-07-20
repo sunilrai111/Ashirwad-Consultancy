@@ -19,7 +19,7 @@ export default function AboutSection() {
           </p>
           <p className="text-gray-600 mx-auto mt-4">
             With over <strong>1500+</strong> successful clients and{" "}
-            <strong>Rs. 7500+ Crores</strong> in arranged financing, we've
+            <strong>Rs. 7500+ Crores</strong> in arranged financing, we&apos;ve
             established ourselves as the go-to partner for industrial growth and
             success.
           </p>

@@ -173,7 +173,7 @@ export default function IndustrialSubsidy() {
                   <div className="w-2 h-2 bg-green-600 rounded-full mt-2 flex-shrink-0"></div>
                   <div>
                     <h4 className="font-semibold text-gray-900">
-                      PMEGP (Prime Minister's Employment Generation Programme)
+                      PMEGP (Prime Minister&apos;s Employment Generation Programme)
                     </h4>
                     <p className="text-gray-600 text-sm">
                       Subsidy up to 35% for manufacturing and service sector

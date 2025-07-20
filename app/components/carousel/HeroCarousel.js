@@ -19,13 +19,13 @@ export default function HeroCarousel() {
 
   const handleSecondaryButtonClick = (buttonText) => {
     let title = "Coming Soon!";
-    let message = "We're working hard to bring you something amazing.";
+    let message = "We&apos;re working hard to bring you something amazing.";
 
     switch (buttonText) {
       case "Explore Solutions":
         title = "Solutions Explorer";
         message =
-          "Our comprehensive solutions explorer is under development. You'll soon be able to browse all our services in detail.";
+          "Our comprehensive solutions explorer is under development. You&apos;ll soon be able to browse all our services in detail.";
         break;
       case "Check Eligibility":
         title = "Eligibility Checker";
@@ -45,7 +45,7 @@ export default function HeroCarousel() {
       default:
         title = "Feature Coming Soon";
         message =
-          "This feature is currently under development. We'll notify you when it's ready!";
+          "This feature is currently under development. We&apos;ll notify you when it&apos;s ready!";
     }
 
     setWorkInProgressConfig({ title, message });
@@ -56,7 +56,7 @@ export default function HeroCarousel() {
     {
       title: "YOUR INDUSTRIAL GROWTH PARTNER",
       subtitle:
-        "Transform your manufacturing dreams into reality with Ashirwad's expert financial solutions. From MSME growth to mega projects, we're your trusted partner for success.",
+        "Transform your manufacturing dreams into reality with Ashirwad&apos;s expert financial solutions. From MSME growth to mega projects, we&apos;re your trusted partner for success.",
       primaryButtonText: "Start Your Journey",
       secondaryButtonText: "Explore Solutions",
       gradientFrom: "from-blue-600",

@@ -21,7 +21,7 @@ export default function Contact() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Let's Start Your Success Story
+              Let&apos;s Start Your Success Story
             </h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
               Ready to transform your industrial growth journey? Contact us
@@ -199,7 +199,7 @@ export default function Contact() {
               Send Us a Message
             </h2>
             <p className="text-gray-600">
-              Fill out the form below and we'll get back to you within 24 hours
+              Fill out the form below and we&apos;ll get back to you within 24 hours
             </p>
           </div>
 
